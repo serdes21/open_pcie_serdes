@@ -1,0 +1,34 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// delay避免命名冲突
+// ============================================================
+// 简单延迟模块：把输入电平经 transition 延迟到输出
+// ============================================================
+module dealy (vin, vout);
+
+    input  vin;
+    output vout;
+    electrical vin, vout;
+
+    parameter real vlogic_high = 1.05 from (-inf:inf);
+    parameter real vlogic_low  = 0    from (-inf:inf);
+
+    parameter real tdel  = 0     from [0:inf);
+    parameter real trise = 2e-12 from [0:inf);
+    parameter real tfall = 2e-12 from [0:inf);
+
+    real    vtrans;
+    integer x;
+
+    analog begin
+        vtrans = (vlogic_high - vlogic_low) / 2.0;
+
+        @(cross(V(vin) - vtrans, 0))
+            // 判定输入电平，并做电平转换/延迟
+            x = (V(vin) > vtrans);
+
+        V(vout) <+ transition(vlogic_high * x + vlogic_low * !x, tdel, trise, tfall);
+    end
+
+endmodule

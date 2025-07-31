@@ -1,0 +1,1204 @@
+Command: /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/my_test_project/sim/./simv -l sim.log +ntb_random_seed=0709020713 +warn=noRT-NCMUCS +warn=noUII-L +warn=noTFIPC +UVM_VERBOSITY=UVM_LOW +UVM_TESTNAME=pcie_mem_pkg_test +UVM_TIMEOUT=8000,YES
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP2_Full64; Runtime version V-2023.12-SP2_Full64;  Jul  9 02:07 2025
+UVM_INFO /home/jjt/install/synopsys/vcs/vcs/V-2023.12-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/common/W-2024.09/sverilog/src/vcs/svt_sequence_item_base.svp(2714) @ 0: reporter [new] VCS-SV simulation.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ps 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/common/W-2024.09/sverilog/src/vcs/svt_sequence_item_base.svp(2723) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: SVT, VIP Version: W-2024.09
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/common/W-2024.09/sverilog/src/vcs/svt_sequence_item_base.svp(2727) @ 0: reporter [new] DESIGNWARE_HOME@compile: /home/jjt/pcie_gen6_cxl_proj/designware_home/.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ps 
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_ax_mstr_ordr_p_event_sel_a2m.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_ax_mstr_ordr_p_event_sel_a2m.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_slv_resp_err_map_a2s.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_slv_resp_err_map_a2s.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_clk_ctrl.u_sync0.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_clk_ctrl.u_sync0.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_clk_ctrl.u_sync1.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_clk_ctrl.u_sync1.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_clk_ctrl.u_c2s_app_xfer_pending.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_clk_ctrl.u_c2s_app_xfer_pending.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_pdcmp.u_hf.u_fctl.U_PUSH_FIFOFCTL.U_sync: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_pdcmp.u_hf.u_fctl.U_POP_FIFOFCTL.U_sync: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_pdcmp.u_df.u_fctl.U_PUSH_FIFOFCTL.U_sync: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_pdcmp.u_df.u_fctl.U_POP_FIFOFCTL.U_sync: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_pdcmp.u_hf.u_fctl module is using the <Dual Clock FIFO Controller (11)> Clock Domain Crossing Method ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_pdcmp.u_df.u_fctl module is using the <Dual Clock FIFO Controller (11)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_npdcmp.u_hdf.u_fctl.U_PUSH_FIFOFCTL.U_sync: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_npdcmp.u_hdf.u_fctl.U_POP_FIFOFCTL.U_sync: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_ob.u_npdcmp.u_hdf.u_fctl module is using the <Dual Clock FIFO Controller (11)> Clock Domain Crossing Method ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_flshctl.u_c2a0.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_flshctl.u_c2a0.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_flshctl.u_s2c0.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_flshctl.u_s2c0.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_wkctl.u_s2a0.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_wkctl.u_s2a0.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[0].u_aux_pulse_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[0].u_aux_unblock_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[0].u_pipe_unblock_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[0].u_aux_pulse_sync module is using the <Toggle Type Event Sychronizer (2)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[1].u_aux_pulse_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[1].u_aux_unblock_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[1].u_pipe_unblock_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_DWC_pcie_core.u_pipe_adapter.u_pipe_to_aux[1].u_aux_pulse_sync module is using the <Toggle Type Event Sychronizer (2)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_gasket_ctrl.u_powerdown_hs.u_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_pm_wakeup.u_axi_slv_sync[0].U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_pm_wakeup.u_axi_slv_sync[1].U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_pm_wakeup.u_axi_slv_sync[2].U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_pm_rst_control.u_perst_n_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_pm_rst_control.u_phystatus_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_phystatus_detect_pclk_on.u_aux_to_pipe_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_phystatus_detect_pclk_on.u_phystatus_pulse_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_phystatus_detect_pclk_off.u_aux_to_pipe_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_phystatus_detect_pclk_off.u_phystatus_pulse_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_phystatus_detect_pclk_on.u_phystatus_pulse_sync module is using the <Toggle Type Event Sychronizer (2)> Clock Domain Crossing Method ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_phystatus_if.u_phystatus_sync.u_phystatus_detect_pclk_off.u_phystatus_pulse_sync module is using the <Toggle Type Event Sychronizer (2)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_pm_active_ctrl.u_phy_clk_req_n_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_pm_ctrl.u_rxeidle_squelch[0].u_sync.U_SYNC: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_ax_mstr_np_pass_p_a2m.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_ax_mstr_np_pass_p_a2m.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: *** Instance tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_err_resp_mode_a2s.u_DWC_pcie_bcm21 module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_bcm21_cfg_err_resp_mode_a2s.u_DWC_pcie_bcm21: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN is: 1 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_quasi.u_bcm36_nhs_slv: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN_LCL is: 2 ***
+Information: tb_top.u_pcie_ep.u_pcie_iip_device.u_subsystem.u_pcie_core.u_axi_bridge.u_axi_quasi.u_bcm36_nhs_mstr: *** Running with DW_MODEL_MISSAMPLES defined, VERIF_EN_LCL is: 2 ***
+   INFO:    spd_0.m_ser: ExpertIO PCIE SVC Version: $Name:  $
+INFO:   update_if_variables: Setting the interface = link_0_vif_0 of type svt_pcie_vif via uvm_config_db for instance = spd_0., port_id = 0, link_id = 0
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_V-2023.12-SP2, Linux x86_64/64bit, 05/26/2024
+(C) 1996 - 2024 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'pcie.fsdb'
+*Verdi* : Begin traversing the scope (tb_top), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs under scope (tb_top), layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1098) @ 0: reporter [report_message] : PCIE_2_5G_BIT_CLK_PERIOD_VAR:0.400000, PCIE_5G_BIT_CLK_PERIOD_VAR:0.200000, PCIE_8G_BIT_CLK_PERIOD_VAR:0.125000, PCIE_16G_BIT_CLK_PERIOD_VAR:0.062500, PCIE_20G_BIT_CLK_PERIOD_VAR:0.050000, PCIE_25G_BIT_CLK_PERIOD_VAR:0.040000, PCIE_32G_BIT_CLK_PERIOD_VAR:0.031250, PCIE_64G_BIT_CLK_PERIOD_VAR:0.031250, fixed_ppm_due_to_tx_rx_xo:          0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1099) @ 0: reporter [report_message] : Serial Tx bit clk period before applying ssc is 0.400000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1291) @ 0: reporter [report_message] ctrl_port: Reset or clock change, reset=0, ctrl_port = 0x00000000000000000000000000000001
+			Prev bit_clk_period = 0.000000 ns, New bit_clk_period = 0.400000 ns, encoding=8/10b
+			SSC Type = NONE, positive freq spread = 0.000000, negative freq spread = 0.000000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_phy.sv(7377) @ 0: reporter [report_message] : 'reset' input is asserted.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_serdes.sv(1871) @ 0: reporter [report_message] : Serdes was reset, PLL (clock) recovery reset
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_serdes.sv(1901) @ 0: reporter [report_message] : Serdes was reset, PLL (clock) recovery reset
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_dynamic_mem.sv(104) @ 0: reporter [report_message] mem0.new: Start addr=0x0000000000001000, Max addr=0x00000000ffffcff0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mem_target.sv(1222) @ 0: reporter [report_message] InitAttrTable: Initializing 64 attribute table entries, with per-address width 64 bits.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mallocator.sv(874) @ 0: reporter [report_message] legacy_mem0.Init: SMALL_PAGE=64 bytes (MASK=0xffffffffffffffc0), LARGE_PAGE=256 (MASK=0xffffffffffffff00), page_size_mask=0x0000000000000007
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mallocator.sv(893) @ 0: reporter [report_message] legacy_mem0.Init: VALID_BIT=0, LARGE_PAGE_SIZE_BIT=3, page_size_mask=0x000000000000000f
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_dynamic_mem.sv(104) @ 0: reporter [report_message] m0.new: Start addr=0x0000000000001000, Max addr=0x00000000ffffcff0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_driver.sv(12664) @ 0: reporter [report_message] : Instance name is tb_top.spd_0.m_ser
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_rand_segs.sv(91) @ 0: reporter [report_message] INIT: Initializing 16 randomization segments, with limit data width 64 bits.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_rand_segs.sv(91) @ 0: reporter [report_message] INIT: Initializing 16 randomization segments, with limit data width 64 bits.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(41465) @ 0: reporter [report_message] : Instance name is tb_top.spd_0.m_ser
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_serdes.sv(1118) @ 0: reporter [report_message] : Injecting TX skew of 9 UI.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_dynamic_mem.sv(104) @ 0: reporter [report_message] mem0.new: Start addr=0x0000000000001000, Max addr=0x00000000ffffcff0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mem_target.sv(1222) @ 0: reporter [report_message] InitAttrTable: Initializing 64 attribute table entries, with per-address width 64 bits.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mallocator.sv(874) @ 0: reporter [report_message] legacy_mem0.Init: SMALL_PAGE=64 bytes (MASK=0xffffffffffffffc0), LARGE_PAGE=256 (MASK=0xffffffffffffff00), page_size_mask=0x0000000000000007
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mallocator.sv(893) @ 0: reporter [report_message] legacy_mem0.Init: VALID_BIT=0, LARGE_PAGE_SIZE_BIT=3, page_size_mask=0x000000000000000f
+UVM_INFO @ 0: reporter [RNTST] Running test pcie_mem_pkg_test...
+UVM_INFO @ 0: reporter [TIMOUTSET] '+UVM_TIMEOUT=8000,YES' provided on the command line is being applied.
+UVM_INFO .././tc/pcie_base_test.sv(29) @ 0: uvm_test_top [build_phase] Entered...
+UVM_INFO .././tc/pcie_base_test.sv(39) @ 0: uvm_test_top [build_phase] Exiting...
+UVM_INFO .././tb/clk_reset_module.sv(21) @ 0: uvm_test_top.u_clk_reset_module [build_phase] Enterned...
+UVM_INFO .././tb/clk_reset_module.sv(27) @ 0: uvm_test_top.u_clk_reset_module [build_phase] Exiting...
+UVM_INFO .././tb/pcie_vip/pcie_env.sv(24) @ 0: uvm_test_top.u_pcie_env [build_phase] Enterned...
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/common/W-2024.09/sverilog/src/vcs/svt_sequence_item_base.svp(6247) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: PCIE, VIP Version: W-2024.09
+UVM_INFO .././tb/pcie_vip/pcie_env.sv(70) @ 0: uvm_test_top.u_pcie_env [build_phase] Exiting...
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_dynamic_mem.sv(104) @ 0: uvm_test_top.u_pcie_env.root.mem_target [report_message] mem0.new: Start addr=0x0000000000001000, Max addr=0x00000000ffffcff0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mallocator.sv(874) @ 0: uvm_test_top.u_pcie_env.root.mem_target [report_message] legacy_mem0.Init: SMALL_PAGE=64 bytes (MASK=0xffffffffffffffc0), LARGE_PAGE=256 (MASK=0xffffffffffffff00), page_size_mask=0x0000000000000007
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_mallocator.sv(893) @ 0: uvm_test_top.u_pcie_env.root.mem_target [report_message] legacy_mem0.Init: VALID_BIT=0, LARGE_PAGE_SIZE_BIT=3, page_size_mask=0x000000000000000f
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_dl_svt/sverilog/src/vcs/svt_pcie_dl_monitor_compliance_chk_mgr.svp(237) @ 0: uvm_test_top.u_pcie_env.root.port0.dl0 [reset_control] [DL Compliance Check Manager] The monitor is configured as Upstream, some compliance checks may not be applicable.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_pl_svt/sverilog/src/vcs/svt_pcie_pl_proxy.svp(1107) @ 0: uvm_test_top.u_pcie_env.root.port0.pl0 [build_phase] Pl msg mgr = uvm_test_top.u_pcie_env.root.err_check.pl, pl flit msg mgr = uvm_test_top.u_pcie_env.root.err_check.pl.pl_flit0
+UVM_INFO .././tb/power_up_module.sv(22) @ 0: uvm_test_top.u_power_up_module [build_phase] Enterned...
+UVM_INFO .././tb/power_up_module.sv(26) @ 0: uvm_test_top.u_power_up_module [build_phase] Exiting...
+UVM_INFO .././tc/pcie_base_test.sv(43) @ 0: uvm_test_top [connect_phase] Entered...
+UVM_INFO .././tc/pcie_base_test.sv(47) @ 0: uvm_test_top [connect_phase] Exiting...
+UVM_INFO .././tc/pcie_base_test.sv(52) @ 0: uvm_test_top [end_of_elaboration_phase] Entered...
+UVM_INFO /home/jjt/install/synopsys/vcs/vcs/V-2023.12-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------------------------------------------------
+Name                                                 Type                                        Size  Value     
+-----------------------------------------------------------------------------------------------------------------
+uvm_test_top                                         pcie_mem_pkg_test                           -     @2207     
+  u_clk_reset_module                                 clk_reset_module                            -     @2370     
+  u_pcie_env                                         pcie_env                                    -     @2224     
+    root                                             svt_pcie_device_agent                       -     @2397     
+      cfg_database_seqr                              svt_pcie_cfg_database_service_sequencer     -     @3570     
+        rsp_export                                   uvm_analysis_export                         -     @3579     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3697     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      device_agent_service_seq_item_port             uvm_seq_item_pull_port                      -     @2441     
+      device_agent_service_seqr                      svt_pcie_device_agent_service_sequencer     -     @3135     
+        rsp_export                                   uvm_analysis_export                         -     @3144     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3262     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      driver0                                        svt_pcie_driver_app                         -     @4522     
+        rsp_port                                     uvm_analysis_port                           -     @4541     
+        rx_tlp_driver_observed_port                  uvm_analysis_port                           -     @5345     
+        rx_tlp_driver_observed_port_intercept        uvm_component                               -     @5355     
+          m_export                                   uvm_analysis_imp                            -     @5374     
+          m_port                                     uvm_analysis_port                           -     @5364     
+        rx_tlp_in_export                             uvm_blocking_put_imp                        -     @5296     
+        rx_tlp_out_port                              uvm_blocking_put_port                       -     @5121     
+        rx_tlp_out_port_intercept                    uvm_component                               -     @5131     
+          m_export                                   uvm_blocking_put_imp                        -     @5150     
+          m_port                                     uvm_blocking_put_port                       -     @5140     
+        rx_tlp_peek_imp                              uvm_component                               -     @5238     
+          rx_tlp_peek_port                           uvm_blocking_peek_port                      -     @5247     
+          rx_tlp_peek_port_intercept                 uvm_component                               -     @5257     
+            m_export                                 uvm_blocking_peek_imp                       -     @5276     
+            m_port                                   uvm_blocking_peek_port                      -     @5266     
+          rx_tlp_peek_port_intercept_comp_export     uvm_blocking_peek_imp                       -     @5286     
+        rx_xact_out_port                             uvm_blocking_put_port                       -     @5199     
+        rx_xact_out_port_intercept                   uvm_component                               -     @5209     
+          m_export                                   uvm_blocking_put_imp                        -     @5228     
+          m_port                                     uvm_blocking_put_port                       -     @5218     
+        seq_item_port                                uvm_seq_item_pull_port                      -     @4531     
+        service_seq_item_port                        uvm_seq_item_pull_port                      -     @5107     
+        tx_tlp_driver_observed_port                  uvm_analysis_port                           -     @5306     
+        tx_tlp_driver_observed_port_intercept        uvm_component                               -     @5316     
+          m_export                                   uvm_analysis_imp                            -     @5335     
+          m_port                                     uvm_analysis_port                           -     @5325     
+        tx_tlp_out_port                              uvm_blocking_put_port                       -     @5160     
+        tx_tlp_out_port_intercept                    uvm_component                               -     @5170     
+          m_export                                   uvm_blocking_put_imp                        -     @5189     
+          m_port                                     uvm_blocking_put_port                       -     @5179     
+      driver_seqr[0]                                 svt_pcie_driver_app_service_sequencer       -     @4005     
+        rsp_export                                   uvm_analysis_export                         -     @4014     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @4132     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      driver_transaction_seqr[0]                     svt_pcie_driver_app_transaction_sequencer   -     @4150     
+        rsp_export                                   uvm_analysis_export                         -     @4159     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @4277     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      io_target0                                     svt_pcie_io_target                          -     @4680     
+        rsp_port                                     uvm_analysis_port                           -     @4699     
+        seq_item_port                                uvm_seq_item_pull_port                      -     @4689     
+        status                                       svt_pcie_io_target_status                   -     @4714     
+          inst                                       string                                      10    unset_inst
+          num_dwords_read                            integral                                    32    'd0       
+          num_dwords_written                         integral                                    32    'd0       
+      io_target_seqr                                 svt_pcie_io_target_service_sequencer        -     @3425     
+        rsp_export                                   uvm_analysis_export                         -     @3434     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3552     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      mem_target                                     svt_pcie_mem_target                         -     @4566     
+        rsp_port                                     uvm_analysis_port                           -     @4585     
+        seq_item_port                                uvm_seq_item_pull_port                      -     @4575     
+        status                                       svt_pcie_mem_target_status                  -     @4600     
+          inst                                       string                                      10    unset_inst
+          num_32_bit_mem_writes                      integral                                    32    'd0       
+          num_64_bit_mem_writes                      integral                                    32    'd0       
+          num_32_bit_mem_writes_w_dword_length_bins  qda                                         11    -         
+            [0]                                      integral                                    32    'd0       
+            [1]                                      integral                                    32    'd0       
+            [2]                                      integral                                    32    'd0       
+            [3]                                      integral                                    32    'd0       
+            [4]                                      integral                                    32    'd0       
+            ...                                      ...                                         ...   ...       
+            [6]                                      integral                                    32    'd0       
+            [7]                                      integral                                    32    'd0       
+            [8]                                      integral                                    32    'd0       
+            [9]                                      integral                                    32    'd0       
+            [10]                                     integral                                    32    'd0       
+          num_64_bit_mem_writes_w_dword_length_bins  qda                                         11    -         
+            [0]                                      integral                                    32    'd0       
+            [1]                                      integral                                    32    'd0       
+            [2]                                      integral                                    32    'd0       
+            [3]                                      integral                                    32    'd0       
+            [4]                                      integral                                    32    'd0       
+            ...                                      ...                                         ...   ...       
+            [6]                                      integral                                    32    'd0       
+            [7]                                      integral                                    32    'd0       
+            [8]                                      integral                                    32    'd0       
+            [9]                                      integral                                    32    'd0       
+            [10]                                     integral                                    32    'd0       
+      mem_target_seqr                                svt_pcie_mem_target_service_sequencer       -     @3280     
+        rsp_export                                   uvm_analysis_export                         -     @3289     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3407     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      port0                                          svt_pcie_agent                              -     @4718     
+        dl0                                          svt_pcie_dl                                 -     @10968    
+          received_dllp_observed_port                uvm_analysis_port                           -     @12135    
+          received_dllp_observed_port_intercept      uvm_component                               -     @12145    
+            m_export                                 uvm_analysis_imp                            -     @12164    
+            m_port                                   uvm_analysis_port                           -     @12154    
+          received_flit_observed_port                uvm_analysis_port                           -     @12057    
+          received_flit_observed_port_intercept      uvm_component                               -     @12067    
+            m_export                                 uvm_analysis_imp                            -     @12086    
+            m_port                                   uvm_analysis_port                           -     @12076    
+          received_tlp_observed_port                 uvm_analysis_port                           -     @11979    
+          received_tlp_observed_port_intercept       uvm_component                               -     @11989    
+            m_export                                 uvm_analysis_imp                            -     @12008    
+            m_port                                   uvm_analysis_port                           -     @11998    
+          rsp_port                                   uvm_analysis_port                           -     @10987    
+          rx_dl_packet_in_port                       uvm_blocking_put_imp                        -     @12193    
+          rx_dllp_out_port                           uvm_blocking_put_port                       -     @11843    
+          rx_dllp_out_port_intercept                 uvm_component                               -     @11853    
+            m_export                                 uvm_blocking_put_imp                        -     @11872    
+            m_port                                   uvm_blocking_put_port                       -     @11862    
+          rx_dllp_peek_imp                           uvm_component                               -     @11882    
+            rx_dllp_peek_port                        uvm_blocking_peek_port                      -     @11891    
+            rx_dllp_peek_port_intercept              uvm_component                               -     @11901    
+              m_export                               uvm_blocking_peek_imp                       -     @11920    
+              m_port                                 uvm_blocking_peek_port                      -     @11910    
+            rx_dllp_peek_port_intercept_comp_export  uvm_blocking_peek_imp                       -     @11930    
+          sent_dllp_observed_port                    uvm_analysis_port                           -     @12096    
+          sent_dllp_observed_port_intercept          uvm_component                               -     @12106    
+            m_export                                 uvm_analysis_imp                            -     @12125    
+            m_port                                   uvm_analysis_port                           -     @12115    
+          sent_flit_observed_port                    uvm_analysis_port                           -     @12018    
+          sent_flit_observed_port_intercept          uvm_component                               -     @12028    
+            m_export                                 uvm_analysis_imp                            -     @12047    
+            m_port                                   uvm_analysis_port                           -     @12037    
+          sent_tlp_observed_port                     uvm_analysis_port                           -     @11940    
+          sent_tlp_observed_port_intercept           uvm_component                               -     @11950    
+            m_export                                 uvm_analysis_imp                            -     @11969    
+            m_port                                   uvm_analysis_port                           -     @11959    
+          seq_item_port                              uvm_seq_item_pull_port                      -     @10977    
+          svc_in_port                                uvm_seq_item_pull_port                      -     @11833    
+          tx_dllp_out_port                           uvm_seq_item_pull_port                      -     @11823    
+        dl_seqr                                      svt_pcie_dl_service_sequencer               -     @9985     
+          rsp_export                                 uvm_analysis_export                         -     @9994     
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @10112    
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        dllp_seqr                                    svt_pcie_dllp_sequencer                     -     @9839     
+          rsp_export                                 uvm_analysis_export                         -     @9848     
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @9966     
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        pl0                                          svt_pcie_pl                                 -     @11119    
+          received_flit_observed_port                uvm_analysis_port                           -     @13037    
+          received_flit_observed_port_intercept      uvm_component                               -     @13047    
+            m_export                                 uvm_analysis_imp                            -     @13066    
+            m_port                                   uvm_analysis_port                           -     @13056    
+          rsp_port                                   uvm_analysis_port                           -     @11138    
+          rx_apn_data_out_analysis_port              uvm_analysis_port                           -     @12951    
+          rx_apn_data_out_analysis_port_intercept    uvm_component                               -     @12961    
+            m_export                                 uvm_analysis_imp                            -     @12980    
+            m_port                                   uvm_analysis_port                           -     @12970    
+          rx_os_observed_port                        uvm_analysis_port                           -     @13076    
+          rx_os_observed_port_intercept              uvm_component                               -     @13086    
+            m_export                                 uvm_analysis_imp                            -     @13105    
+            m_port                                   uvm_analysis_port                           -     @13095    
+          sent_flit_observed_port                    uvm_analysis_port                           -     @12998    
+          sent_flit_observed_port_intercept          uvm_component                               -     @13008    
+            m_export                                 uvm_analysis_imp                            -     @13027    
+            m_port                                   uvm_analysis_port                           -     @13017    
+          seq_item_port                              uvm_seq_item_pull_port                      -     @11128    
+          svc_in_port                                uvm_seq_item_pull_port                      -     @12931    
+          tx_apn_data_in_port                        uvm_seq_item_pull_port                      -     @12941    
+          tx_os_observed_port                        uvm_analysis_port                           -     @13115    
+          tx_os_observed_port_intercept              uvm_component                               -     @13125    
+            m_export                                 uvm_analysis_imp                            -     @13144    
+            m_port                                   uvm_analysis_port                           -     @13134    
+        pl_seqr                                      svt_pcie_pl_service_sequencer               -     @10131    
+          rsp_export                                 uvm_analysis_export                         -     @10140    
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @10258    
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        tl0                                          svt_pcie_tl                                 -     @10816    
+          driver_app_tlp_seq_item_port               uvm_seq_item_pull_port                      -     @45298    
+          requester_app_tlp_seq_item_port            uvm_seq_item_pull_port                      -     @45308    
+          rsp_port                                   uvm_analysis_port                           -     @10835    
+          rx_tlp_out_port                            uvm_blocking_put_port                       -     @45318    
+          rx_tlp_out_port_intercept                  uvm_component                               -     @45328    
+            m_export                                 uvm_blocking_put_imp                        -     @45347    
+            m_port                                   uvm_blocking_put_port                       -     @45337    
+          rx_tlp_peek_imp                            uvm_component                               -     @45357    
+            rx_tlp_peek_port                         uvm_blocking_peek_port                      -     @45366    
+            rx_tlp_peek_port_intercept               uvm_component                               -     @45376    
+              m_export                               uvm_blocking_peek_imp                       -     @45395    
+              m_port                                 uvm_blocking_peek_port                      -     @45385    
+            rx_tlp_peek_port_intercept_comp_export   uvm_blocking_peek_imp                       -     @45405    
+          seq_item_port                              uvm_seq_item_pull_port                      -     @10825    
+          service_seq_item_port                      uvm_seq_item_pull_port                      -     @45288    
+        tl_seqr                                      svt_pcie_tl_service_sequencer               -     @9693     
+          rsp_export                                 uvm_analysis_export                         -     @9702     
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @9820     
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        tlp_seqr                                     svt_pcie_tlp_sequencer                      -     @9547     
+          rsp_export                                 uvm_analysis_export                         -     @9556     
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @9674     
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        tx_apn_data_seqr                             svt_pcie_alternate_protocol_data_sequencer  -     @10277    
+          rsp_export                                 uvm_analysis_export                         -     @10286    
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @10404    
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        tx_dl_packet_seqr                            svt_pcie_dl_packet_sequencer                -     @10425    
+          rsp_export                                 uvm_analysis_export                         -     @10434    
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @10552    
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        tx_pl_service_seqr                           svt_pcie_pl_service_sequencer               -     @10572    
+          rsp_export                                 uvm_analysis_export                         -     @10581    
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @10699    
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+        virt_seqr                                    svt_pcie_virtual_sequencer                  -     @9391     
+          rsp_export                                 uvm_analysis_export                         -     @9400     
+          seq_item_export                            uvm_seq_item_pull_imp                       -     @9518     
+          pl_seqr                                    svt_pcie_pl_service_sequencer               -     @10131    
+          tx_apn_data_seqr                           svt_pcie_alternate_protocol_data_sequencer  -     @10277    
+          dl_seqr                                    svt_pcie_dl_service_sequencer               -     @9985     
+          tl_seqr                                    svt_pcie_tl_service_sequencer               -     @9693     
+          tlp_seqr                                   svt_pcie_tlp_sequencer                      -     @9547     
+          dllp_seqr                                  svt_pcie_dllp_sequencer                     -     @9839     
+          tx_tlp_seqr                                object                                      -     <null>    
+          tx_dl_packet_seqr                          svt_pcie_dl_packet_sequencer                -     @10425    
+          tx_pl_service_seqr                         svt_pcie_pl_service_sequencer               -     @10572    
+          arbitration_queue                          array                                       0     -         
+          lock_queue                                 array                                       0     -         
+          num_last_reqs                              integral                                    32    'd1       
+          num_last_rsps                              integral                                    32    'd1       
+      requester0                                     svt_pcie_requester_app                      -     @4604     
+        rsp_port                                     uvm_analysis_port                           -     @4623     
+        rx_tlp_in_export                             uvm_blocking_put_imp                        -     @46807    
+        rx_tlp_out_port                              uvm_blocking_put_port                       -     @46710    
+        rx_tlp_out_port_intercept                    uvm_component                               -     @46720    
+          m_export                                   uvm_blocking_put_imp                        -     @46739    
+          m_port                                     uvm_blocking_put_port                       -     @46729    
+        rx_tlp_peek_imp                              uvm_component                               -     @46749    
+          rx_tlp_peek_port                           uvm_blocking_peek_port                      -     @46758    
+          rx_tlp_peek_port_intercept                 uvm_component                               -     @46768    
+            m_export                                 uvm_blocking_peek_imp                       -     @46787    
+            m_port                                   uvm_blocking_peek_port                      -     @46777    
+          rx_tlp_peek_port_intercept_comp_export     uvm_blocking_peek_imp                       -     @46797    
+        seq_item_port                                uvm_seq_item_pull_port                      -     @4613     
+        tx_tlp_out_port                              uvm_blocking_put_port                       -     @46817    
+        tx_tlp_out_port_intercept                    uvm_component                               -     @46827    
+          m_export                                   uvm_blocking_put_imp                        -     @46846    
+          m_port                                     uvm_blocking_put_port                       -     @46836    
+      requester_seqr                                 svt_pcie_requester_app_service_sequencer    -     @3860     
+        rsp_export                                   uvm_analysis_export                         -     @3869     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3987     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      target_appl0                                   svt_pcie_target_app                         -     @4642     
+        cfg_database0                                svt_pcie_cfg_database                       -     @47234    
+          rsp_port                                   uvm_analysis_port                           -     @47253    
+          seq_item_port                              uvm_seq_item_pull_port                      -     @47243    
+        rsp_port                                     uvm_analysis_port                           -     @4661     
+        rx_tlp_in_export                             uvm_blocking_put_imp                        -     @47369    
+        rx_tlp_out_port                              uvm_blocking_put_port                       -     @47272    
+        rx_tlp_out_port_intercept                    uvm_component                               -     @47282    
+          m_export                                   uvm_blocking_put_imp                        -     @47301    
+          m_port                                     uvm_blocking_put_port                       -     @47291    
+        rx_tlp_peek_imp                              uvm_component                               -     @47311    
+          rx_tlp_peek_port                           uvm_blocking_peek_port                      -     @47320    
+          rx_tlp_peek_port_intercept                 uvm_component                               -     @47330    
+            m_export                                 uvm_blocking_peek_imp                       -     @47349    
+            m_port                                   uvm_blocking_peek_port                      -     @47339    
+          rx_tlp_peek_port_intercept_comp_export     uvm_blocking_peek_imp                       -     @47359    
+        rx_tlp_target_observed_port                  uvm_analysis_port                           -     @47457    
+        rx_tlp_target_observed_port_intercept        uvm_component                               -     @47467    
+          m_export                                   uvm_analysis_imp                            -     @47486    
+          m_port                                     uvm_analysis_port                           -     @47476    
+        seq_item_port                                uvm_seq_item_pull_port                      -     @4651     
+        tx_tlp_out_port                              uvm_blocking_put_port                       -     @47379    
+        tx_tlp_out_port_intercept                    uvm_component                               -     @47389    
+          m_export                                   uvm_blocking_put_imp                        -     @47408    
+          m_port                                     uvm_blocking_put_port                       -     @47398    
+        tx_tlp_target_observed_port                  uvm_analysis_port                           -     @47418    
+        tx_tlp_target_observed_port_intercept        uvm_component                               -     @47428    
+          m_export                                   uvm_analysis_imp                            -     @47447    
+          m_port                                     uvm_analysis_port                           -     @47437    
+      target_seqr[0]                                 svt_pcie_target_app_service_sequencer       -     @3715     
+        rsp_export                                   uvm_analysis_export                         -     @3724     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3842     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+      virt_seqr                                      uvm_sequencer                               -     @2990     
+        rsp_export                                   uvm_analysis_export                         -     @2999     
+        seq_item_export                              uvm_seq_item_pull_imp                       -     @3117     
+        pcie_virt_seqr                               svt_pcie_virtual_sequencer                  -     @9391     
+        device_agent_service_seqr                    svt_pcie_device_agent_service_sequencer     -     @3135     
+        mem_target_seqr                              svt_pcie_mem_target_service_sequencer       -     @3280     
+        cfg_database_seqr                            svt_pcie_cfg_database_service_sequencer     -     @3570     
+        io_target_seqr                               svt_pcie_io_target_service_sequencer        -     @3425     
+        target_seqr                                  aa(object,int)                              1     -         
+          [0]                                        svt_pcie_target_app_service_sequencer       -     @3715     
+        requester_seqr                               svt_pcie_requester_app_service_sequencer    -     @3860     
+        driver_seqr                                  aa(object,int)                              1     -         
+          [0]                                        svt_pcie_driver_app_service_sequencer       -     @4005     
+        driver_transaction_seqr                      aa(object,int)                              1     -         
+          [0]                                        svt_pcie_driver_app_transaction_sequencer   -     @4150     
+        arbitration_queue                            array                                       0     -         
+        lock_queue                                   array                                       0     -         
+        num_last_reqs                                integral                                    32    'd1       
+        num_last_rsps                                integral                                    32    'd1       
+  u_pcie_virtual_sequencer                           pcie_virtual_sequencer                      -     @2233     
+    rsp_export                                       uvm_analysis_export                         -     @2242     
+    seq_item_export                                  uvm_seq_item_pull_imp                       -     @2360     
+    arbitration_queue                                array                                       0     -         
+    lock_queue                                       array                                       0     -         
+    num_last_reqs                                    integral                                    32    'd1       
+    num_last_rsps                                    integral                                    32    'd1       
+  u_power_up_module                                  power_up_module                             -     @2379     
+-----------------------------------------------------------------------------------------------------------------
+
+UVM_INFO .././tc/pcie_base_test.sv(54) @ 0: uvm_test_top [end_of_elaboration_phase] Exiting...
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_dl_svt/sverilog/src/vcs/svt_pcie_dl_proxy.svp(688) @ 0: uvm_test_top.u_pcie_env.root.port0.dl0 [run_phase] Instance name - spd_0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_pl_svt/sverilog/src/vcs/svt_pcie_pl_proxy.svp(1302) @ 0: uvm_test_top.u_pcie_env.root.port0.pl0 [run_phase] Instance name - spd_0
+UVM_INFO .././tb/clk_reset_module.sv(32) @ 0: uvm_test_top.u_clk_reset_module [main_phase] Enterned...
+UVM_INFO .././tb/power_up_module.sv(31) @ 0: uvm_test_top.u_power_up_module [main_phase] Enterned...
+UVM_INFO .././tc/pcie_mem_pkg_test.sv(23) @ 0: uvm_test_top [main_phase] Enterned...
+UVM_WARNING /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/common/W-2024.09/sverilog/src/vcs/svt_sequence_item_base.svp(2497) @ 1000000: reporter [get_checked_out_features_text] Unable to determine the license feature used to authorize PCIE
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/common/W-2024.09/sverilog/src/vcs/svt_agent.svp(780) @ 1000000: uvm_test_top.u_pcie_env.root.port0 [display_checked_out_features] VIP Vendor: Synopsys, VIP Suite: PCIE, VIP License: 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(481) @ 2000000: reporter [report_message] Init: Clock skew set to 1.056400 ns
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1098) @ 5000000: reporter [report_message] : PCIE_2_5G_BIT_CLK_PERIOD_VAR:0.400000, PCIE_5G_BIT_CLK_PERIOD_VAR:0.200000, PCIE_8G_BIT_CLK_PERIOD_VAR:0.125000, PCIE_16G_BIT_CLK_PERIOD_VAR:0.062500, PCIE_20G_BIT_CLK_PERIOD_VAR:0.050000, PCIE_25G_BIT_CLK_PERIOD_VAR:0.040000, PCIE_32G_BIT_CLK_PERIOD_VAR:0.031250, PCIE_64G_BIT_CLK_PERIOD_VAR:0.031250, fixed_ppm_due_to_tx_rx_xo:          0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1099) @ 5000000: reporter [report_message] : Serial Tx bit clk period before applying ssc is 0.400000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1291) @ 5000000: reporter [report_message] ctrl_port: Reset or clock change, reset=0, ctrl_port = 0x00000000000000000000000000138801
+			Prev bit_clk_period = 0.400000 ns, New bit_clk_period = 0.400000 ns, encoding=8/10b
+			SSC Type = NONE, positive freq spread = 0.000000, negative freq spread = 0.000000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(40737) @ 200000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] SetFcScaleMode:  Setting local shared hdr FC scale = 1 for VC0, credit type P.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(40737) @ 200000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] SetFcScaleMode:  Setting local shared data FC scale = 1 for VC0, credit type P.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(40737) @ 200000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] SetFcScaleMode:  Setting local shared hdr FC scale = 1 for VC0, credit type NP.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(40737) @ 200000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] SetFcScaleMode:  Setting local shared data FC scale = 1 for VC0, credit type NP.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(40737) @ 200000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] SetFcScaleMode:  Setting local shared hdr FC scale = 1 for VC0, credit type CPL.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(40737) @ 200000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] SetFcScaleMode:  Setting local shared data FC scale = 1 for VC0, credit type CPL.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_dl_svt/sverilog/src/vcs/svt_pcie_dl_proxy.svp(5535) @ 200000000: uvm_test_top.u_pcie_env.root.port0.dl0 [open_transaction_log_file] Opened <transaction.log> with filehandle -2147483644
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_phy.sv(7399) @ 200000000: uvm_test_top.u_pcie_env.root.port0.pl0 [report_message] : 'reset' input is deasserted.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_global_shadow.sv(2729) @ 200000000: reporter [report_message] MapShadowCfgBlock: Lookup of CPT for Bus #0 (0x0) not found, creating it with support for 256 functions
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_global_shadow.sv(1586) @ 200000000: reporter [report_message] SetCPTForBusNum: Adding entry Cfg CPT table[0] Bus=#0 ptr=0x00000003
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_global_shadow.sv(2644) @ 200000000: reporter [report_message] ModifyShadowCfgReg: (BDF=0x00_01, reg=0x2004), cpt=0x00000003, prev_data=0x00000000, new_data=0x00000001
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_global_shadow.sv(2747) @ 200000000: reporter [report_message] MapShadowCfgBlock: Lookup of Cfg block for Function #0 of Bus #0 (0x0) not found, creating it
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_global_shadow.sv(2644) @ 200000000: reporter [report_message] ModifyShadowCfgReg: (BDF=0x00_00, reg=0x2004), cpt=0x00000003, prev_data=0x00000000, new_data=0x00000001
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_link.sv(29579) @ 200000000: uvm_test_top.u_pcie_env.root.port0.dl0 [report_message] SetLinkEnable: DL link_enable = 1 via call to SetLinkEnable task.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_pl_svt/sverilog/src/vcs/svt_pcie_pl_proxy.svp(3708) @ 201000000: uvm_test_top.u_pcie_env.root.port0.pl0 [reconfigure_after_reset] DEVICE configuration : IS_TX_DOWNSTREAM_VAR - 1. PHY_INTERFACE_TYPE - 1H. IS_PIPE_MASTER - 1, PIPE_CLK_FROM_MAC - 0.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_pl_svt/sverilog/src/vcs/svt_pcie_pl_proxy.svp(3709) @ 201000000: uvm_test_top.u_pcie_env.root.port0.pl0 [reconfigure_after_reset] LINK configuration : Link width - 1, Supported vector - 1, Expected link width - 1.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_pl_svt/sverilog/src/vcs/svt_pcie_pl_proxy.svp(3710) @ 201000000: uvm_test_top.u_pcie_env.root.port0.pl0 [reconfigure_after_reset] PIPE configuration : Rate - 2.5 Gts Width - PIPE_8_BITS Pclk rate - PCLK_250_MHZ.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_phy_api.sv(624) @ 201000000: uvm_test_top.u_pcie_env.root.port0.pl0 [report_message] SetExpectedSpeed: Setting expected speed to 2.5GT/s
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1098) @ 201000000: reporter [report_message] : PCIE_2_5G_BIT_CLK_PERIOD_VAR:0.400000, PCIE_5G_BIT_CLK_PERIOD_VAR:0.200000, PCIE_8G_BIT_CLK_PERIOD_VAR:0.125000, PCIE_16G_BIT_CLK_PERIOD_VAR:0.062500, PCIE_20G_BIT_CLK_PERIOD_VAR:0.050000, PCIE_25G_BIT_CLK_PERIOD_VAR:0.040000, PCIE_32G_BIT_CLK_PERIOD_VAR:0.031250, PCIE_64G_BIT_CLK_PERIOD_VAR:0.031250, fixed_ppm_due_to_tx_rx_xo:          0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1099) @ 201000000: reporter [report_message] : Serial Tx bit clk period before applying ssc is 0.400000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/svt_svc_clkgen4.sv(1291) @ 201000000: reporter [report_message] ctrl_port: Reset or clock change, reset=0, ctrl_port = 0x00000000000000000000000003138801
+			Prev bit_clk_period = 0.400000 ns, New bit_clk_period = 0.400000 ns, encoding=8/10b
+			SSC Type = NONE, positive freq spread = 0.000000, negative freq spread = 0.000000
+UVM_INFO .././tb/power_up_module.sv(45) @ 995000000: uvm_test_top.u_power_up_module [main_phase] Exiting...
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_ltssm.sv(3750) @ 12213000000: uvm_test_top.u_pcie_env.root.port0.pl0 [report_message] LTSSM: Performing receiver detect
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_target_appl.sv(10140) @ 100200000000: uvm_test_top.u_pcie_env.root.target_appl0 [report_message] 
+DisplayStatsLight: PCIE Target Stats:
+    Total received TLPs 	= 0,	Total received REQs       = 0
+    Total received bytes	= 0,	Total received data bytes = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_serdes.sv(1706) @ 150741000000: uvm_test_top.u_pcie_env.root.port0.pl0 [report_message] : Serdes receiver PLL (clock) has locked with a bit period of 0.400000 ns (M=3, T=0.000100)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_target_appl.sv(10140) @ 200200000000: uvm_test_top.u_pcie_env.root.target_appl0 [report_message] 
+DisplayStatsLight: PCIE Target Stats:
+    Total received TLPs 	= 0,	Total received REQs       = 0
+    Total received bytes	= 0,	Total received data bytes = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_ltssm.sv(10837) @ 220389000000: uvm_test_top.u_pcie_env.root.port0.pl0 [report_message] LTSSM: Mutually supported speed is 2_5GT/s
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_ltssm.sv(20570) @ 221009000000: uvm_test_top.u_pcie_env.root.port0.pl0 [report_message] LTSSM: Link training completed.  The link is READY! Speed is 2_5Gb/s. Link width is 1. Link number is 0. Scrambling is ENABLED. Flit mode is DISABLED
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(14629) @ 221437000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] ReceiveCredits: Infinite header credits received for VC0, fc type =                            CPL.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(14635) @ 221437000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] ReceiveCredits: Infinite data credits received for VC0, fc type =                            CPL.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221469000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC P hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221501000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC NP hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221533000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC CPL hdr credit received(0), original hdr credit(0) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221565000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC P hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221597000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC NP hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221629000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC CPL hdr credit received(0), original hdr credit(0) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221661000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC P hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221693000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC NP hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221725000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC CPL hdr credit received(0), original hdr credit(0) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221757000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC P hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221789000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC NP hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221821000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC CPL hdr credit received(0), original hdr credit(0) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221853000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC P hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221885000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC NP hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221917000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC CPL hdr credit received(0), original hdr credit(0) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221949000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC P hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+=================================
+UVM_INFO .././tc/pcie_mem_pkg_test.sv(40) @ 221949000000: uvm_test_top [main_phase] pcie vip link ip
+=================================
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 221949000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         221949000000 |                      |      CFG_RD      |                0 |        0 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_driver.sv(11272) @ 221953000000: uvm_test_top.u_pcie_env.root.driver0 [report_message] tag_mgr.SetUpTagsForReqID: Setting up outstanding_tag_last_reqid per new requester_id = 0x1.
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(35684) @ 221953000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] AddRequesterIdApplIdMapEntry: The requester_id 0x0001 has been mapped to appl_id           1
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 221981000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC NP hdr credit received(24), original hdr credit(24) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/pcie_dev/src/sverilog/vcs/pciesvc_transaction.sv(21133) @ 222013000000: uvm_test_top.u_pcie_env.root.port0.tl0 [report_message] CheckInitCreditsUnchanged:  VC0 InitFC CPL hdr credit received(0), original hdr credit(0) - unscaled. valid = 1, rx_merged_credits = 0, shared_credit = 0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 222721000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x0, data:0xabcd16c3
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(415) @ 222721000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [enumeration_device] DEVICE_ID_VENDOR_ID_REG = 0xabcd16c3
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 222721000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         222721000000 |                      |      CFG_RD      |                0 |        3 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 223553000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0xc, data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(432) @ 223553000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [enumeration_device] device header type-0 confirmed
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(443) @ 223553000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [enumeration_device] device is single-function
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 223553000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         223553000000 |                      |      CFG_RD      |                0 |        d |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 224385000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x34, data:0x40
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 224385000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         224385000000 |                      |      CFG_RD      |                0 |       10 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 225217000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x40, data:0xc9c37001
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 225217000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         225217000000 |                      |      CFG_RD      |                0 |       1c |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 226049000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x70, data:0x20010
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(104) @ 226049000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_pci_capability_base_addr] get_cap_id:PCIE_CAP_ID, base_addr:0x70
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 226049000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         226049000000 |                      |      CFG_RD      |                0 |       1c |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 226881000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x70, data:0x20010
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(459) @ 226881000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [enumeration_device] device port type = PCIe Endpoint (0x0)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 226881000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         226881000000 |                      |      CFG_RD      |                0 |        4 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 227713000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x10, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 227713000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         227713000000 |                      |      CFG_WR      |                0 |        4 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xffffffff
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 228545000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x10 data:0xffffffff
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 228545000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         228545000000 |                      |      CFG_RD      |                0 |        4 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 229377000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x10, data:0xffff0000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 229377000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         229377000000 |                      |      CFG_WR      |                0 |        4 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x0
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 230209000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x10 data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(221) @ 230209000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_size] BAR0 is 32-bit Memory BAR, size = 0x10000 (64 KiB)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 230209000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         230209000000 |                      |      CFG_WR      |                0 |        4 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x400000
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 231041000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x10 data:0x400000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 231041000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         231041000000 |                      |      CFG_RD      |                0 |        4 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 231873000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x10, data:0x400000
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(294) @ 231873000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_addr] BAR0 32-bit Memory BAR, addr = 0x400000
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 231873000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         231873000000 |                      |      CFG_RD      |                0 |        5 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 232705000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x14, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 232705000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         232705000000 |                      |      CFG_WR      |                0 |        5 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xffffffff
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 233537000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x14 data:0xffffffff
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 233537000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         233537000000 |                      |      CFG_RD      |                0 |        5 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 234369000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x14, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 234369000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         234369000000 |                      |      CFG_WR      |                0 |        5 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x0
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 235201000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x14 data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(221) @ 235201000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_size] BAR1 is 32-bit Memory BAR, size = 0x0 (0 KiB)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 235201000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         235201000000 |                      |      CFG_RD      |                0 |        6 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 236033000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x18, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 236033000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         236033000000 |                      |      CFG_WR      |                0 |        6 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xffffffff
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 236865000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x18 data:0xffffffff
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 236865000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         236865000000 |                      |      CFG_RD      |                0 |        6 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 237697000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x18, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 237697000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         237697000000 |                      |      CFG_WR      |                0 |        6 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x0
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 238529000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x18 data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(221) @ 238529000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_size] BAR2 is 32-bit Memory BAR, size = 0x0 (0 KiB)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 238529000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         238529000000 |                      |      CFG_RD      |                0 |        7 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 239361000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x1c, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 239361000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         239361000000 |                      |      CFG_WR      |                0 |        7 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xffffffff
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 240193000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x1c data:0xffffffff
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 240193000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         240193000000 |                      |      CFG_RD      |                0 |        7 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 241025000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x1c, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 241025000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         241025000000 |                      |      CFG_WR      |                0 |        7 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x0
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 241857000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x1c data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(221) @ 241857000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_size] BAR3 is 32-bit Memory BAR, size = 0x0 (0 KiB)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 241857000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         241857000000 |                      |      CFG_RD      |                0 |        8 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 242689000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x20, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 242689000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         242689000000 |                      |      CFG_WR      |                0 |        8 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xffffffff
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 243521000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x20 data:0xffffffff
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 243521000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         243521000000 |                      |      CFG_RD      |                0 |        8 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 244353000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x20, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 244353000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         244353000000 |                      |      CFG_WR      |                0 |        8 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x0
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 245185000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x20 data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(221) @ 245185000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_size] BAR4 is 32-bit Memory BAR, size = 0x0 (0 KiB)
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 245185000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         245185000000 |                      |      CFG_RD      |                0 |        9 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 246017000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x24, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 246017000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         246017000000 |                      |      CFG_WR      |                0 |        9 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xffffffff
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 246849000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x24 data:0xffffffff
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 246849000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         246849000000 |                      |      CFG_RD      |                0 |        9 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 247681000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x24, data:0x0
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 247681000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         247681000000 |                      |      CFG_WR      |                0 |        9 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x0
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x24 data:0x0
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(221) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [get_bar_size] BAR5 is 32-bit Memory BAR, size = 0x0 (0 KiB)
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(382) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [pcie_bar_cfg] BAR0: 32-bit, addr = 0x400000, size = 0x10000 (64 KiB)
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(392) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [pcie_bar_cfg] BAR1: unused / upper DW
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(392) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [pcie_bar_cfg] BAR2: unused / upper DW
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(392) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [pcie_bar_cfg] BAR3: unused / upper DW
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(392) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [pcie_bar_cfg] BAR4: unused / upper DW
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(392) @ 248513000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [pcie_bar_cfg] BAR5: unused / upper DW
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 248513000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         248513000000 |                      |      CFG_RD      |                0 |       1d |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 249345000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x74, data:0x8fc1
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(471) @ 249345000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [enumeration_device_sequence] max_payload_size_support:max_256B_SIZE
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 249345000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         249345000000 |                      |      CFG_RD      |                0 |       1e |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(81) @ 250177000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_read] addr:0x78, data:0x102010
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 250177000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         250177000000 |                      |      CFG_WR      |                0 |       1e |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x101030
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 251009000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x78 data:0x101030
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 251009000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Reg Num  | 1st DWBE | Cfg type | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|----------|----------|----------|----|------------------|
+| Queuing packet ....              |         251009000000 |                      |      CFG_WR      |                0 |        1 |        f |    0     |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x7
+
+UVM_INFO .././tb/seq_lib/enumeration_device_sequence.sv(57) @ 251841000000: uvm_test_top.u_pcie_virtual_sequencer@@enumeration_device_sequence [cfg_reg_write] addr:0x4 data:0x7
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 251841000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         251841000000 |                    0 |      MEM_WR      |           400010 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x4030201
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 251969000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400010, data:'{'h4030201} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 251969000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         251969000000 |                    0 |      MEM_WR      |           400014 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x8070605
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 252097000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400014, data:'{'h8070605} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 252097000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         252097000000 |                    0 |      MEM_WR      |           400018 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0xc0b0a09
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 252225000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400018, data:'{'hc0b0a09} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 252225000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         252225000000 |                    0 |      MEM_WR      |           40001c |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x100f0e0d
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 252353000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x40001c, data:'{'h100f0e0d} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 252353000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         252353000000 |                    0 |      MEM_WR      |           400020 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x14131211
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 252481000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400020, data:'{'h14131211} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 252481000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         252481000000 |                    0 |      MEM_RD      |           400020 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 253441000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400020, data:'{'h14131211} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 253441000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         253441000000 |                    0 |      MEM_WR      |           400024 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x18171615
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 253569000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400024, data:'{'h18171615} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 253569000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         253569000000 |                    0 |      MEM_RD      |           400024 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 254465000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400024, data:'{'h18171615} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 254465000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         254465000000 |                    0 |      MEM_WR      |           400028 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x1c1b1a19
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 254593000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400028, data:'{'h1c1b1a19} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 254593000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         254593000000 |                    0 |      MEM_RD      |           400028 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 255489000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400028, data:'{'h1c1b1a19} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 255489000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         255489000000 |                    0 |      MEM_WR      |           40002c |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x201f1e1d
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 255617000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x40002c, data:'{'h201f1e1d} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 255617000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         255617000000 |                    0 |      MEM_RD      |           40002c |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 256513000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x40002c, data:'{'h201f1e1d} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 256513000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         256513000000 |                    0 |      MEM_WR      |           400000 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   [0] = 0x80000000
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(47) @ 256641000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem write addr:0x400000, data:'{'h80000000} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 256641000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         256641000000 |                    0 |      MEM_RD      |           400000 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 257537000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400000, data:'{'h0} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 257537000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         257537000000 |                    0 |      MEM_RD      |           400030 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 258433000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400030, data:'{'h18161412} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 258433000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         258433000000 |                    0 |      MEM_RD      |           400034 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 259329000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400034, data:'{'h201e1c1a} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 259329000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         259329000000 |                    0 |      MEM_RD      |           400038 |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 260225000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x400038, data:'{'h28262422} 
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(1265) @ 260225000000: uvm_test_top.u_pcie_env.root.driver0 [process_transactions] 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| DriverApp                        |      Start Time      |       End Time       | Transaction Type |       Addr       | Length | 1st DWBE | Last DWB | TC | AT | EP |     Cpl Stat     |
+|----------------------------------|----------------------|----------------------|------------------|------------------|--------|----------|----------|----|----|----|------------------|
+| Queuing packet ....              |         260225000000 |                    0 |      MEM_RD      |           40003c |      1 |        f |        0 |  0 |  0 |  0 |     AWAITED      |
+
+Payload  <obj>.payload                   = empty array
+
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(75) @ 261121000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [pcie_mem_pkg_sequence] mem read addr:0x40003c, data:'{'h302e2c2a} 
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(168) @ 261121000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [VEC_ADD] Result DW0 OK : 0x18161412
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(168) @ 261121000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [VEC_ADD] Result DW1 OK : 0x201e1c1a
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(168) @ 261121000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [VEC_ADD] Result DW2 OK : 0x28262422
+UVM_INFO .././tb/seq_lib/pcie_mem_pkg_sequence.sv(168) @ 261121000000: uvm_test_top.u_pcie_virtual_sequencer@@pcie_mem_pkg_sequence [VEC_ADD] Result DW3 OK : 0x302e2c2a
+UVM_INFO .././tc/pcie_mem_pkg_test.sv(52) @ 261121000000: uvm_test_top [main_phase] Exiting...
+UVM_INFO /home/jjt/pcie_gen6_cxl_proj/designware_home/vip/svt/pcie_svt/W-2024.09/pcie_driver_app_svt/sverilog/src/vcs/svt_pcie_driver_app_proxy.svp(463) @ 261121000000: uvm_test_top.u_pcie_env.root.driver0 [report_phase] Driver CMB table size reached maximum of 1 entries at time         260225000000 - max index match = 0
+UVM_INFO .././tc/pcie_base_test.sv(60) @ 261121000000: uvm_test_top [final_phase] Entered...
+UVM_INFO .././tc/pcie_base_test.sv(68) @ 261121000000: uvm_test_top [final_phase] 
+SvtTestEpilog: Passed
+
+UVM_INFO .././tc/pcie_base_test.sv(72) @ 261121000000: uvm_test_top [final_phase] Exiting...
+UVM_INFO /home/jjt/install/synopsys/vcs/vcs/V-2023.12-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 261121000000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /home/jjt/install/synopsys/vcs/vcs/V-2023.12-SP2/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 261121000000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  243
+UVM_WARNING :    1
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TIMOUTSET]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[VEC_ADD]     4
+[build_phase]     9
+[cfg_reg_read]    21
+[cfg_reg_write]    15
+[connect_phase]     2
+[display_checked_out_features]     1
+[end_of_elaboration_phase]     2
+[enumeration_device]     4
+[enumeration_device_sequence]     1
+[final_phase]     3
+[get_bar_addr]     1
+[get_bar_size]     6
+[get_checked_out_features_text]     1
+[get_pci_capability_base_addr]     1
+[main_phase]     6
+[new]     4
+[open_transaction_log_file]     1
+[pcie_bar_cfg]     6
+[pcie_mem_pkg_sequence]    18
+[process_transactions]    54
+[reconfigure_after_reset]     3
+[report_message]    72
+[report_phase]     1
+[reset_control]     1
+[run_phase]     2
+
+$finish called from file "/home/jjt/install/synopsys/vcs/vcs/V-2023.12-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time         261120856400
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 261120856400 fs
+CPU Time:     44.090 seconds;       Data structure size:  27.3Mb
+Wed Jul  9 02:08:05 2025

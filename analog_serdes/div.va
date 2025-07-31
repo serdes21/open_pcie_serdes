@@ -1,0 +1,51 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// ============================================================
+// 分频模块：对输入时钟进行 ratio 分频
+// - 每 ratio/2 个上升沿翻转一次输出
+// ============================================================
+module div (vin, vout);
+
+    input  vin;
+    output vout;
+    electrical vin, vout;
+
+    parameter integer ratio       = 10      from [1:inf);     // 分频系数
+    parameter real    vlogic_high = 1.05    from (-inf:inf);
+    parameter real    vlogic_low  = 0       from (-inf:inf);
+    parameter real    trise       = 2e-12   from [0:inf);
+    parameter real    tfall       = 2e-12   from [0:inf);
+    parameter real    tdel        = 0       from [0:inf);
+
+    real vout_logic; // 输出逻辑电平（高或低）
+    real cnt;        // 计数器（用 real 以符合 Verilog-A）
+    real vtrans;     // 阈值
+
+    analog begin
+        vtrans = (vlogic_high - vlogic_low) / 2.0;
+
+        @(initial_step) begin
+            cnt        = 0;
+            vout_logic = vlogic_low;
+        end
+
+        // 统计上升沿次数
+        @(cross(V(vin) - vtrans, +1)) begin
+            cnt = cnt + 1;
+        end
+
+        // 当计数到 ratio/2 时输出置高；计数到 ratio 时输出置低并归零
+        if (cnt == (ratio/2)) begin
+            vout_logic = vlogic_high;
+        end
+        else if (cnt == ratio) begin
+            vout_logic = vlogic_low;
+            cnt        = 0;
+        end
+
+        // 输出电压
+        V(vout) <+ transition(vout_logic, tdel, trise, tfall);
+    end
+
+endmodule

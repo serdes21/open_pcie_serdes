@@ -1,0 +1,245 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+
+module parallel32_prbs7 (
+    clk,
+    d0 , d1 , d2 , d3 , d4 , d5 , d6 , d7 ,
+    d8 , d9 , d10, d11, d12, d13, d14, d15,
+    d16, d17, d18, d19, d20, d21, d22, d23,
+    d24, d25, d26, d27, d28, d29, d30, d31,
+    clk_data,
+    serial_data
+);
+
+    // ----------------------
+    // 端口声明
+    // ----------------------
+    output serial_data, clk_data;
+    output d0 , d1 , d2 , d3 , d4 , d5 , d6 , d7 ,
+           d8 , d9 , d10, d11, d12, d13, d14, d15,
+           d16, d17, d18, d19, d20, d21, d22, d23,
+           d24, d25, d26, d27, d28, d29, d30, d31;
+    input  clk;
+
+    // Verilog-A 的 electrical 端口定义
+    electrical prbsp, prbsn, clk, clk_div, serial_data;
+    electrical d0 , d1 , d2 , d3 , d4 , d5 , d6 , d7 ,
+               d8 , d9 , d10, d11, d12, d13, d14, d15,
+               d16, d17, d18, d19, d20, d21, d22, d23,
+               d24, d25, d26, d27, d28, d29, d30, d31;
+
+    // ----------------------
+    // 参数定义
+    // ----------------------
+    parameter integer prbs_bit    = 7        from [1:inf);    // PRBS 阶数（此处为 PRBS7）
+    parameter real    vlogic_high = 1.05     from (-inf:inf); // 逻辑高电平
+    parameter real    vlogic_low  = 0        from (-inf:inf); // 逻辑低电平
+    parameter real    tdel        = 0        from [0:inf);    // 输出延迟
+    parameter real    trise       = 5e-12    from [0:inf);    // 上升沿时间
+    parameter real    tfall       = 5e-12    from [0:inf);    // 下降沿时间
+    parameter real    period      = 1.1424e-9 from [0:inf);   // 时钟周期（用于对齐并行输出）
+
+    // ----------------------
+    // 内部变量
+    // ----------------------
+    integer bits[0:6];   // LFSR 寄存器：PRBS7 对应 7 位
+    integer i;
+    integer vout;        // 串行当前输出位
+
+    // 暂存 32 位并行输出（分为“锁存前”和“锁存后”两组）
+    integer vout0,  vout1,  vout2,  vout3,  vout4,  vout5,  vout6,  vout7,
+            vout8,  vout9,  vout10, vout11, vout12, vout13, vout14, vout15,
+            vout16, vout17, vout18, vout19, vout20, vout21, vout22, vout23,
+            vout24, vout25, vout26, vout27, vout28, vout29, vout30, vout31;
+
+    integer vout_0,  vout_1,  vout_2,  vout_3,  vout_4,  vout_5,  vout_6,  vout_7,
+            vout_8,  vout_9,  vout_10, vout_11, vout_12, vout_13, vout_14, vout_15,
+            vout_16, vout_17, vout_18, vout_19, vout_20, vout_21, vout_22, vout_23,
+            vout_24, vout_25, vout_26, vout_27, vout_28, vout_29, vout_30, vout_31;
+
+    integer counter;     // 计数器，用于收集 32 位并行数据
+    real    vtrans_clk;  // 时钟转换阈值
+    integer new_bit;     // 新生成的 PRBS 位
+
+    // ----------------------
+    // 模拟行为
+    // ----------------------
+    analog begin
+
+        // 初始条件
+        @(initial_step) begin
+            counter = 0;
+            bits[0] = 1; // LFSR 初始状态，可根据需要修改，但需非全零
+            bits[1] = 0;
+            bits[2] = 0;
+            bits[3] = 0;
+            bits[4] = 0;
+            bits[5] = 0;
+            bits[6] = 0;
+        end
+
+        // 计算阈值（高低电平中点）
+        vtrans_clk = (vlogic_high - vlogic_low) / 2.0;
+
+        // ----------------------
+        // 时钟上升沿触发：产生下一个 PRBS 位，并缓存至 32bit 暂存器
+        // ----------------------
+        @(cross(V(clk) - vtrans_clk, +1)) begin
+
+            // 反馈项：PRBS7 tap(6,5) => XOR
+            new_bit = bits[prbs_bit-1] ^ bits[prbs_bit-2]; // 6^5
+            vout    = new_bit;                             // 串行输出位
+
+            // 把当前最高位写进对应的并行 buffer（vout_*）
+            if (counter==0 )  vout_0  = bits[prbs_bit-1];
+            if (counter==1 )  vout_1  = bits[prbs_bit-1];
+            if (counter==2 )  vout_2  = bits[prbs_bit-1];
+            if (counter==3 )  vout_3  = bits[prbs_bit-1];
+            if (counter==4 )  vout_4  = bits[prbs_bit-1];
+            if (counter==5 )  vout_5  = bits[prbs_bit-1];
+            if (counter==6 )  vout_6  = bits[prbs_bit-1];
+            if (counter==7 )  vout_7  = bits[prbs_bit-1];
+            if (counter==8 )  vout_8  = bits[prbs_bit-1];
+            if (counter==9 )  vout_9  = bits[prbs_bit-1];
+            if (counter==10)  vout_10 = bits[prbs_bit-1];
+            if (counter==11)  vout_11 = bits[prbs_bit-1];
+            if (counter==12)  vout_12 = bits[prbs_bit-1];
+            if (counter==13)  vout_13 = bits[prbs_bit-1];
+            if (counter==14)  vout_14 = bits[prbs_bit-1];
+            if (counter==15)  vout_15 = bits[prbs_bit-1];
+            if (counter==16)  vout_16 = bits[prbs_bit-1];
+            if (counter==17)  vout_17 = bits[prbs_bit-1];
+            if (counter==18)  vout_18 = bits[prbs_bit-1];
+            if (counter==19)  vout_19 = bits[prbs_bit-1];
+            if (counter==20)  vout_20 = bits[prbs_bit-1];
+            if (counter==21)  vout_21 = bits[prbs_bit-1];
+            if (counter==22)  vout_22 = bits[prbs_bit-1];
+            if (counter==23)  vout_23 = bits[prbs_bit-1];
+            if (counter==24)  vout_24 = bits[prbs_bit-1];
+            if (counter==25)  vout_25 = bits[prbs_bit-1];
+            if (counter==26)  vout_26 = bits[prbs_bit-1];
+            if (counter==27)  vout_27 = bits[prbs_bit-1];
+            if (counter==28)  vout_28 = bits[prbs_bit-1];
+            if (counter==29)  vout_29 = bits[prbs_bit-1];
+            if (counter==30)  vout_30 = bits[prbs_bit-1];
+            if (counter==31)  vout_31 = bits[prbs_bit-1];
+
+            // LFSR 移位
+            for (i = prbs_bit-1; i > 0; i = i - 1)
+                bits[i] = bits[i - 1];
+            bits[0] = new_bit;
+
+            counter = counter + 1;
+        end
+
+        // 当计数到 32 时重新开始计数
+        if (counter == 32) begin
+            counter = 0;
+        end
+
+        // ----------------------
+        // 分频时钟下降沿时，把 buffer 值锁存到最终并行输出寄存器 voutX
+        // ----------------------
+        @(cross(V(clk_div) - vtrans_clk, -1)) begin
+            vout0  = vout_0;
+            vout1  = vout_1;
+            vout2  = vout_2;
+            vout3  = vout_3;
+            vout4  = vout_4;
+            vout5  = vout_5;
+            vout6  = vout_6;
+            vout7  = vout_7;
+            vout8  = vout_8;
+            vout9  = vout_9;
+            vout10 = vout_10;
+            vout11 = vout_11;
+            vout12 = vout_12;
+            vout13 = vout_13;
+            vout14 = vout_14;
+            vout15 = vout_15;
+            vout16 = vout_16;
+            vout17 = vout_17;
+            vout18 = vout_18;
+            vout19 = vout_19;
+            vout20 = vout_20;
+            vout21 = vout_21;
+            vout22 = vout_22;
+            vout23 = vout_23;
+            vout24 = vout_24;
+            vout25 = vout_25;
+            vout26 = vout_26;
+            vout27 = vout_27;
+            vout28 = vout_28;
+            vout29 = vout_29;
+            vout30 = vout_30;
+            vout31 = vout_31;
+        end
+
+        // ----------------------
+        // 电压输出（transition 实现延迟与边沿控制）
+        // ----------------------
+        V(serial_data) <+ transition(vlogic_high * vout  + vlogic_low * !vout , tdel,              trise, tfall);
+        V(d0 )         <+ transition(vlogic_high * vout0 + vlogic_low * !vout0, tdel + period/2.0, trise, tfall);
+        V(d1 )         <+ transition(vlogic_high * vout1 + vlogic_low * !vout1, tdel + period/2.0, trise, tfall);
+        V(d2 )         <+ transition(vlogic_high * vout2 + vlogic_low * !vout2, tdel + period/2.0, trise, tfall);
+        V(d3 )         <+ transition(vlogic_high * vout3 + vlogic_low * !vout3, tdel + period/2.0, trise, tfall);
+        V(d4 )         <+ transition(vlogic_high * vout4 + vlogic_low * !vout4, tdel + period/2.0, trise, tfall);
+        V(d5 )         <+ transition(vlogic_high * vout5 + vlogic_low * !vout5, tdel + period/2.0, trise, tfall);
+        V(d6 )         <+ transition(vlogic_high * vout6 + vlogic_low * !vout6, tdel + period/2.0, trise, tfall);
+        V(d7 )         <+ transition(vlogic_high * vout7 + vlogic_low * !vout7, tdel + period/2.0, trise, tfall);
+        V(d8 )         <+ transition(vlogic_high * vout8 + vlogic_low * !vout8, tdel + period/2.0, trise, tfall);
+        V(d9 )         <+ transition(vlogic_high * vout9 + vlogic_low * !vout9, tdel + period/2.0, trise, tfall);
+        V(d10)         <+ transition(vlogic_high * vout10+ vlogic_low * !vout10,tdel + period/2.0, trise, tfall);
+        V(d11)         <+ transition(vlogic_high * vout11+ vlogic_low * !vout11,tdel + period/2.0, trise, tfall);
+        V(d12)         <+ transition(vlogic_high * vout12+ vlogic_low * !vout12,tdel + period/2.0, trise, tfall);
+        V(d13)         <+ transition(vlogic_high * vout13+ vlogic_low * !vout13,tdel + period/2.0, trise, tfall);
+        V(d14)         <+ transition(vlogic_high * vout14+ vlogic_low * !vout14,tdel + period/2.0, trise, tfall);
+        V(d15)         <+ transition(vlogic_high * vout15+ vlogic_low * !vout15,tdel + period/2.0, trise, tfall);
+        V(d16)         <+ transition(vlogic_high * vout16+ vlogic_low * !vout16,tdel + period/2.0, trise, tfall);
+        V(d17)         <+ transition(vlogic_high * vout17+ vlogic_low * !vout17,tdel + period/2.0, trise, tfall);
+        V(d18)         <+ transition(vlogic_high * vout18+ vlogic_low * !vout18,tdel + period/2.0, trise, tfall);
+        V(d19)         <+ transition(vlogic_high * vout19+ vlogic_low * !vout19,tdel + period/2.0, trise, tfall);
+        V(d20)         <+ transition(vlogic_high * vout20+ vlogic_low * !vout20,tdel + period/2.0, trise, tfall);
+        V(d21)         <+ transition(vlogic_high * vout21+ vlogic_low * !vout21,tdel + period/2.0, trise, tfall);
+        V(d22)         <+ transition(vlogic_high * vout22+ vlogic_low * !vout22,tdel + period/2.0, trise, tfall);
+        V(d23)         <+ transition(vlogic_high * vout23+ vlogic_low * !vout23,tdel + period/2.0, trise, tfall);
+        V(d24)         <+ transition(vlogic_high * vout24+ vlogic_low * !vout24,tdel + period/2.0, trise, tfall);
+        V(d25)         <+ transition(vlogic_high * vout25+ vlogic_low * !vout25,tdel + period/2.0, trise, tfall);
+        V(d26)         <+ transition(vlogic_high * vout26+ vlogic_low * !vout26,tdel + period/2.0, trise, tfall);
+        V(d27)         <+ transition(vlogic_high * vout27+ vlogic_low * !vout27,tdel + period/2.0, trise, tfall);
+        V(d28)         <+ transition(vlogic_high * vout28+ vlogic_low * !vout28,tdel + period/2.0, trise, tfall);
+        V(d29)         <+ transition(vlogic_high * vout29+ vlogic_low * !vout29,tdel + period/2.0, trise, tfall);
+        V(d30)         <+ transition(vlogic_high * vout30+ vlogic_low * !vout30,tdel + period/2.0, trise, tfall);
+        V(d31)         <+ transition(vlogic_high * vout31+ vlogic_low * !vout31,tdel + period/2.0, trise, tfall);
+
+    end // analog
+
+    // ----------------------
+    // 32 分频模块：产生 clk_div
+    // ----------------------
+    div #(
+        .ratio      (32),
+        .vlogic_high(vlogic_high),
+        .vlogic_low (vlogic_low),
+        .tdel       (period/2),
+        .trise      (trise),
+        .tfall      (tfall)
+    ) div_1 (
+        clk,
+        clk_div
+    );
+
+    // 延迟模块：生成对齐后的 clk_data
+    dealy #(
+        .vlogic_high(vlogic_high),
+        .vlogic_low (vlogic_low),
+        .tdel       (period/2),
+        .trise      (trise),
+        .tfall      (tfall)
+    ) dealy_1 (
+        clk_div,
+        clk_data
+    );
+
+endmodule
