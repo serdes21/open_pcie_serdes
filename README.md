@@ -7,7 +7,7 @@
 链接： https://serdes21.github.io/
 
 ## Redox PCIe + FPGA实机演示视频
-链接： 
+链接： https://www.bilibili.com/video/BV1vK8mzUEhf
 
 
 
